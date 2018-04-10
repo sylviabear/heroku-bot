@@ -15,7 +15,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
-
 # Create a function that tweets
 # CODE GOES HERE
-api.update_status(f"Hello, world! {str(datetime.now())}")
+while(True):
+  api.update_status(f"Hello, world! {str(datetime.now())}")
+  time.sleep(300)
