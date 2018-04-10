@@ -2,6 +2,7 @@
 import tweepy
 import json
 import time
+from datetime import datetime
 
 # Twitter API Keys
 consumer_key = "YScGj4M4Oe3iyJIK0X7Ou14cx"
@@ -17,4 +18,4 @@ api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
 # Create a function that tweets
 # CODE GOES HERE
-api.update_status("Hello, world!")
+api.update_status(f"Hello, world! {str(datetime.now())}")
